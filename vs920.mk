@@ -1,3 +1,7 @@
+# Custom apns must come before cdma.mk is included
+PRODUCT_COPY_FILES += \
+	device/lge/vs920/config/apns-conf.xml:system/etc/apns-conf.xml
+
 $(call inherit-product, device/lge/iprj-common/iprj.mk)
 
 $(call inherit-product-if-exists, vendor/lge/vs920/vs920-vendor.mk)
